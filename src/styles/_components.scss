@@ -1,0 +1,89 @@
+.header {
+  background-color: $bg-color;
+
+  &__menu {
+    padding: 15px 0;
+
+    &-list {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    &-item {
+      list-style: none;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $text-primary;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+  }
+}
+
+.btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  gap: 8px;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &--primary {
+    background-color: $primary-color;
+    color: white;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  &--secondary {
+    background-color: $bg-color;
+    color: $text-primary;
+    border: 1px solid $border-color;
+
+    &:hover {
+      background-color: darken($bg-color, 5%);
+    }
+  }
+
+  &--icon {
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+  &--small {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+}
+
+.movies {
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
