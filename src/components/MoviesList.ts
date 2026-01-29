@@ -13,8 +13,13 @@ export function createMoviesList(): HTMLElement {
         <div class="movies__item" id="${movie.id}">
             <img class="movies__image" src="${movie.image}" alt="${movie.title}" />
             <div class="movies__name">${movie.title}</div>
-            <div class="movies__genre">${movie.genre}</div>
-            <div class="movies__duration">${movie.duration}</div>
+            <div class="movies__footer">
+                <div class="movies__info">
+                    <div class="movies__genre">${movie.genre},</div>
+                    <div class="movies__duration">${movie.duration} мин</div>
+                </div>
+                <div class="movies__rating">Рейтинг: ${movie.rating}🌟</div>
+            </div>
         </div>
         `,
           )

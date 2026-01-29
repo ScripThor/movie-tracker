@@ -77,13 +77,43 @@
 .movies {
   &__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
 
   &__image {
     width: 100%;
     border-radius: 10px;
+  }
+
+  &__name {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__info {
+    display: flex;
+    gap: 10px;
+    color: #6c757d;
+  }
+}
+
+.kanban {
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
   }
 }
 

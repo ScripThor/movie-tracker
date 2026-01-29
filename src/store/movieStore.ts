@@ -18,7 +18,7 @@ export class MovieStore {
     }
   }
 
-  addMovie(movieData: Omit<Movie, 'id' | 'createdAt'>): Movie {
+  addMovie(movieData: Omit<Movie, 'id'>): Movie {
     const newMovie: Movie = {
       ...movieData,
       id: this.generateId(),
@@ -49,17 +49,6 @@ export class MovieStore {
           'https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_FMjpg_UX1000_.jpg',
       },
       {
-        title: 'Криминальное чтиво',
-        genre: 'Криминал',
-        duration: 154,
-        rating: 5,
-        status: 'watched',
-        description:
-          'Несколько переплетающихся историй о лос-анджелесских преступниках.',
-        image:
-          'https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg',
-      },
-      {
         title: 'Паразиты',
         genre: 'Драма',
         duration: 132,
@@ -82,7 +71,7 @@ export class MovieStore {
           'https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg',
       },
       {
-        title: 'Властелин колец: Братство Кольца',
+        title: 'Властелин колец',
         genre: 'Фэнтези',
         duration: 178,
         rating: 5,

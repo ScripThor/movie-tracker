@@ -9,7 +9,6 @@ export function renderMoviesPage(): HTMLElement {
 
   const moviesList = createMoviesList()
 
-  // Собираем страницу
   page.appendChild(title)
   page.appendChild(moviesList)
 
