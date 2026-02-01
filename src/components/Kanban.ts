@@ -1,5 +1,4 @@
 import { movieStore } from '../app.ts'
-import type { Movie } from '../store/movieStore.ts'
 
 export function createKanban(): HTMLElement {
   const kanban = document.createElement('div')
@@ -19,23 +18,27 @@ export function createKanban(): HTMLElement {
     },
   ]
 
-  console.log(movies)
-
-  function sortMovies(movies: Movie[]) {}
-
-  movies.map((movie) => {
-    movie.id = movie.id
-    movie.title = movie.title
-  })
   kanban.classList.add('kanban')
 
   kanban.innerHTML = `
 <div class="kanban__wrapper">
   ${columns.map(
     (column) =>
-      `  <div class="kanban__column">
+      `  
+  <div class="kanban__column" data-status="${column.status}">
       <div class="kanban__header">${column.title}</div>
-      <div class="kanban__body"></div>
+      <div class="kanban__body">
+         ${movies
+           .filter((movie) => column.status === movie.status)
+           .map(
+             (movie) => `
+        <div class="movies__item" id="${movie.id}">
+            <div class="movies__name">${movie.title}</div>
+        </div>
+        `,
+           )
+           .join('')}
+      </div>
   </div>
 `,
   )}
